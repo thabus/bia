@@ -14,7 +14,7 @@ A aplicação foi preparada e conteinerizada utilizando **Docker**, com as image
 * **Serviços AWS Utilizados:** ECS (Fargate), ECR, RDS (PostgreSQL), IAM, Application Load Balancer (ALB).
 * **Alta Disponibilidade:** Configuração de Target Groups e monitoramento de *health checks* para garantir que o tráfego só seja roteado para instâncias saudáveis.
 
-![Target Group Health](./tg-com-tasks_health.png)
+![Target Group Health](./assets/tg-com-tasks_health.png)
 > *Visão do Target Group mostrando as tasks do ECS saudáveis (Healthy) e prontas para receber tráfego.*
 
 ---
@@ -25,7 +25,7 @@ Para garantir a integração e entrega contínuas, foi construída uma esteira a
 
 * **Fluxo:** Source (GitHub) ➡️ Build (CodeBuild) ➡️ Deploy (ECS).
 
-![Pipeline CI/CD AWS](./pipeline.png)
+![Pipeline CI/CD AWS](./assets/pipeline.png)
 > *Pipeline completo e executado com sucesso (Source, Build e Deploy).*
 
 ---
@@ -37,7 +37,7 @@ O ambiente foi configurado seguindo as melhores práticas de segurança de rede,
 * Criação de infraestrutura usando linguagem natural no ECS.
 * Configuração de domínio personalizado com certificado SSL/TLS (HTTPS).
 
-![Aplicação BIA com HTTPS](./BIA-rodando-com-https.png)
+![Aplicação BIA com HTTPS](./assets/BIA-rodando-com-https.png)
 > *Aplicação em produção, rodando com segurança HTTPS.*
 
 ---
@@ -48,7 +48,7 @@ A estruturação dessa infraestrutura contou com o suporte ativo de Inteligênci
 * **Automação com Kiro-cli:** Utilização do Kiro-cli como assistente de IA no terminal para gerar o `Dockerfile`, preparar a aplicação e auxiliar na criação de scripts.
 * **Integração MCP Server:** Uso de servidores MCP para permitir que a IA interaja em tempo real com o banco de dados PostgreSQL e com o cluster ECS, além de validar se as configurações de segurança (IAM, Redes) seguiam as melhores práticas da AWS.
 
-![Estrutura e Deploy](./image_1b0c15.png)
+![Diagnótico da Aplicação BIA ](./assets/Diagnostico-kiro-cli.png)
 
 ---
 
